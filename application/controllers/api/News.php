@@ -30,7 +30,7 @@ class News extends REST_Controller {
 
     public function News_post()
     {
-        $data = $this->input->post();
+        $data = $this->post();
         if($this->db->insert('news', $data))
             $this->response('Item creado con éxito.', REST_Controller::HTTP_OK);
     }
